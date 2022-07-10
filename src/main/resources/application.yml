@@ -1,0 +1,14 @@
+
+spring:
+  data:
+    cassandra:
+      keyspace-name: jarvis_datastore
+      #entity-base-packages:
+      contact-points: 172.28.2.206
+      port: 9042
+      cluster-name: cassandra_cluster
+      username: root
+      password: root
+      local-datacenter: datacenter1
+server:
+  port: 8080
