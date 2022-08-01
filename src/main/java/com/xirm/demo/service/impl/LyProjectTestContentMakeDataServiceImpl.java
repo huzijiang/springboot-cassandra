@@ -83,7 +83,7 @@ public class LyProjectTestContentMakeDataServiceImpl implements LyProjectTestCon
         DeviceDataPoint dataDeviceDataPoint = new DeviceDataPoint();
         dataDeviceDataPoint.setDeviceId(deviceId);
         dataDeviceDataPoint.setIdentifier("RotatingVelocity");
-        dataDeviceDataPoint.setCreatedAt(new Date());
+        dataDeviceDataPoint.setCreatedAt(new Date() );
 //        dataDeviceDataPoint.setActionParameters("action parameters...");
 //        dataDeviceDataPoint.setDesiredAt();
 //        dataDeviceDataPoint.setDesiredValue("desire value...");
