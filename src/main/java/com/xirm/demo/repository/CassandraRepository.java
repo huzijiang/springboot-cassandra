@@ -11,12 +11,8 @@ import java.util.Optional;
  * @author huzj
  */
 public interface CassandraRepository extends CrudRepository<Location, Serializable> {
-	/**
-	 *
-	 * @param vehicleId
-	 * @param date
-	 * @return
-	 */
+
+
 	public Optional<Location> findByVehicleIdAndDate(String vehicleId, String date);
 
 }

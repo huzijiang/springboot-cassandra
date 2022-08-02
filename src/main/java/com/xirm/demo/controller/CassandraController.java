@@ -3,6 +3,7 @@ package com.xirm.demo.controller;
 import com.xirm.demo.entity.Address;
 import com.xirm.demo.entity.Location;
 import com.xirm.demo.repository.CassandraRepository;
+import com.xirm.demo.repository.CassandraRepositoryLocation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,9 @@ public class CassandraController {
 
     @Autowired
     private CassandraRepository repository;
+
+    @Autowired
+    private CassandraRepositoryLocation cassandraRepositoryLocation;
 
     @GetMapping
     public ResponseEntity<?> getLocationDetails(@RequestParam("vehicle_id") String vehicleId,
@@ -60,7 +64,7 @@ public class CassandraController {
 
         location.setAddress(address);
 
-        repository.save(location);
+        cassandraRepositoryLocation.save(location);
 
         return "success";
     }
