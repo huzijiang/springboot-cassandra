@@ -10,7 +10,6 @@ import java.util.Optional;
 /**
  * @author huzj
  */
-@Repository
 public interface CassandraRepository extends CrudRepository<Location, Serializable> {
 	/**
 	 *

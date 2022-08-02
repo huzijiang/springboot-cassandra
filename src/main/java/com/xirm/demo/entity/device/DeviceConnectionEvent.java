@@ -18,7 +18,7 @@ import static org.mockito.Mockito.*;
  */
 @Table("device_connection_event")
 @Data
-public class DeviceConnectionEvent  implements Serializable {
+public class   DeviceConnectionEvent  implements Serializable {
     @PrimaryKeyColumn(name = "device_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     @Column("device_id")
     private Long deviceId;
