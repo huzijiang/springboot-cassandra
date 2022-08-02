@@ -47,18 +47,21 @@ public class CassandraController {
         address.setStreet("北三环西路");
         address.setZip_code(110001);
 
-        for (int i=0;i<10;i++){
-            Location location=new Location();
-            location.setVehicleId(System.currentTimeMillis()+"");
-            location.setLongitude(110.000);
-            location.setLatitude(119.000);
-            location.setDate(simpleDateFormat.format(new Date()));
-            location.setTime(new Date());
-            location.setAddress(address);
+        Date date=new Date();
 
-            repository.save(location);
-            Thread.sleep(200L);
-        }
+        Location location=new Location();
+
+        location.setVehicleId(System.currentTimeMillis()+"");
+        location.setLongitude(110.000);
+        location.setLatitude(119.000);
+
+        location.setDate(simpleDateFormat.format(date));
+        location.setTime(date);
+
+        location.setAddress(address);
+
+        repository.save(location);
+
         return "success";
     }
 
