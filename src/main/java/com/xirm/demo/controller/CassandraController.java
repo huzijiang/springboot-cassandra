@@ -2,7 +2,6 @@ package com.xirm.demo.controller;
 
 import com.xirm.demo.entity.Address;
 import com.xirm.demo.entity.Location;
-import com.xirm.demo.repository.CassandraRepository;
 import com.xirm.demo.repository.CassandraRepositoryLocation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,25 +20,7 @@ import java.util.Optional;
 public class CassandraController {
 
     @Autowired
-    private CassandraRepository repository;
-
-    @Autowired
     private CassandraRepositoryLocation cassandraRepositoryLocation;
-
-    @GetMapping
-    public ResponseEntity<?> getLocationDetails(@RequestParam("vehicle_id") String vehicleId,
-                                                @RequestParam("date") String date) {
-
-        Optional<Location> location = repository.findByVehicleIdAndDate(vehicleId, date);
-
-        return location.map(response -> ResponseEntity.ok().body(response)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
-
-    @PostMapping
-    public void insertLocationDetails(@RequestBody Location location) {
-
-        repository.save(location);
-    }
 
     @GetMapping("/add")
     public String insertLocationDetails() throws InterruptedException {
