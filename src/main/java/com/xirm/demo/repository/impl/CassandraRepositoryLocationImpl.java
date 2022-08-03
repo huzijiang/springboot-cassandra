@@ -2,7 +2,9 @@ package com.xirm.demo.repository.impl;
 
 import com.xirm.demo.entity.Location;
 import com.xirm.demo.repository.CassandraRepositoryLocation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.cassandra.core.CassandraTemplate;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
@@ -11,9 +13,10 @@ import javax.annotation.Resource;
  * @version 1.0
  * @date 2022/8/2 11:37
  */
+@Service
 public class CassandraRepositoryLocationImpl  implements CassandraRepositoryLocation {
 
-    @Resource
+    @Autowired
     private CassandraTemplate cassandraTemplate;
 
 
@@ -24,7 +27,7 @@ public class CassandraRepositoryLocationImpl  implements CassandraRepositoryLoca
 
     @Override
     public void findAll() {
-//        cassandraTemplate.select()
+
     }
 
     @Override

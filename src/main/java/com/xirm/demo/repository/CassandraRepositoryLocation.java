@@ -11,7 +11,6 @@ import java.io.Serializable;
  * @version 1.0
  * @date 2022/8/2 10:19
  */
-@Repository
 public interface CassandraRepositoryLocation {
 
     /**
