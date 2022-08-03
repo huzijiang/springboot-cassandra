@@ -1,7 +1,6 @@
 package com.xirm.demo.entity.device;
 
 import lombok.Data;
-import org.mockito.Mock;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
@@ -10,7 +9,6 @@ import org.springframework.data.cassandra.core.mapping.Table;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Date;
-import static org.mockito.Mockito.*;
 /**
  * @author huzj
  * @version 1.0

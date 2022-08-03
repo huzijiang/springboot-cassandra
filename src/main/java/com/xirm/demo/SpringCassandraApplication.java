@@ -11,6 +11,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 public class SpringCassandraApplication {
 
     public static void main(String[] args) {
+
+
         SpringApplication.run(SpringCassandraApplication.class, args);
     }
 
