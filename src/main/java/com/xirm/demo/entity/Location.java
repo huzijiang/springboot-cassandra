@@ -11,8 +11,8 @@ import java.util.Date;
 /**
  * @author huzj
  */
-@Table("location")
 @Data
+@Table("location")
 public class Location {
 
 	@PrimaryKeyColumn(name = "vehicle_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
