@@ -60,52 +60,6 @@
 
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.github.wvengen</groupId>
-                <artifactId>proguard-maven-plugin</artifactId>
-                <version>2.3.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>proguard</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <proguardVersion>6.2.2</proguardVersion>
-                    <injar>${project.build.finalName}.jar</injar>
-                    <outjar>${project.build.finalName}.jar</outjar>
-                    <obfuscate>true</obfuscate>
-                    <proguardInclude>${project.basedir}/proguard.cfg</proguardInclude>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>net.sf.proguard</groupId>
-                        <artifactId>proguard-base</artifactId>
-                        <version>6.2.2</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>com.example.Application</mainClass>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
     <profiles>
         <profile>
             <id>native</id>
