@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -23,7 +24,7 @@ public class CassandraController {
     private CassandraRepositoryLocation cassandraRepositoryLocation;
 
     @GetMapping("/add")
-    public String insertLocationDetails() throws InterruptedException {
+    public String insertLocationDetails()  {
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-HH-MM");
 
         Address address=new Address();
@@ -50,5 +51,12 @@ public class CassandraController {
         return "success";
     }
 
+
+    @GetMapping("/find")
+    public String findLocations()  {
+        List<Location> locationList=cassandraRepositoryLocation.findByTime();
+        System.out.println(locationList.size());
+        return "success";
+    }
 
 }

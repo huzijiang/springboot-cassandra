@@ -1,12 +1,11 @@
 
 spring:
   data:
+    ##4.0.1
     cassandra:
-      keyspace-name: jarvis_datastore
-      #entity-base-packages:
+      keyspace-name: demo
       contact-points: 47.118.51.155
       port: 9042
-      cluster-name: cassandra_cluster
       username: cassandra
       password: cassandra
       local-datacenter: datacenter1
